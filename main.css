@@ -1,0 +1,38 @@
+body {
+    background-color: #000000;
+}
+
+#prompt {
+    display: none;
+}
+
+#commandprompt {
+    background: #000000;
+    border: 0px;
+    color: #ffffff;
+    width: 95%;
+}
+
+li {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.text{
+    color: #ffffff;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.arrow {
+    color: #00ff00;
+}
+
+.command {
+    color: #ffffff;
+}
