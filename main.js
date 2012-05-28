@@ -14,6 +14,9 @@ run_command = function(command){
 	return $("div#nojs div#location").html();
     case "tickets":
 	return $("div#nojs div#tickets").html();
+    case "eval":
+	eval(argv.join(""));
+	return "";
     case "help":
 	var retval;
 	retval = "<span class='text'>Commands:</span>"
@@ -23,6 +26,7 @@ run_command = function(command){
 	retval += "<li>tickets - ticket info</li>";
 	retval += "<li>print - print page</li>";
 	retval += "<li>echo - echo a string</li>";
+	retval += "<li>eval - eval some js</li>";
 	retval += "<li>help - print this message</li>";
 	retval += "</ul>";
 	return retval;
