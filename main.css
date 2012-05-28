@@ -13,6 +13,12 @@ body {
     width: 95%;
 }
 
+#googlemap {
+    border: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
 li {
     color: #ffffff;
 }
