@@ -4,53 +4,53 @@
     <meta charset="UTF-8" />
     <title>Make-all - 17-19 augusti, Tekniska Museet</title>
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="openlayers/theme/default/style.css" type="text/css">
     <link href="main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
 
-    <span class="command">
-      <span class="arrow"> &gt; </span>make all
-    </span>
+    <div class="logo">
+      <img src="makeall-logo.png">
+    </div>
     <div id="nojs">
       <div id="intro">
-	<h2>Intro</h2>
+	<h1>Intro</h1>
 	<span class="text">
-	  A creative hacker/maker event in Stockholm with lectures and workshops arranged by <a class="text" href="http://sparvnastet.org/">Sparvnästet Hacker Space</a>
+	  A creative hacker/maker event in Stockholm with lectures and workshops arranged by <a class="text" href="http://sparvnastet.org/">Sparvnästet Hacker Space</a>.
 	</span>
       </div>
       <div id="lectures">
-	<h2>Lectures</h2>
+	<h1>Lectures</h1>
 	<span class="text">
-	  TBA <br />
-	  Send us an email if you have something you want to talk about
+	  TBA <br /> Send us an email if you have something you want to talk about.
 	</span>
       </div>
       <div id="dates">
-	<h2>When?</h2>
+	<h1>When?</h1>
 	<span class="text">
 	  17-19 august 2012
 	</span>
       </div>
       <div id="location">
-	<h2>Where?</h2>
+	<h1>Where?</h1>
 	<span class="text">
 	  We will be at <a href="http://www.tekniskamuseet.se/" class="text">Tekniska Museet</a>
 	</span><br />
-	<iframe width="425" height="350" src="https://maps.google.com/maps/ms?msid=216226177174357037245.0004c104ccb33518fce94&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=59.332492,18.119309&amp;spn=0.002345,0.005456&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps/ms?msid=216226177174357037245.0004c104ccb33518fce94&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=59.332492,18.119309&amp;spn=0.002345,0.005456&amp;source=embed" class="text">View larger map</a></small>
+        <div id="map" class="smallmap"></div>
       </div>
       <div id="commute">
-	<h2>Commute to the event</h2>
+	<h1>Commute to the event</h1>
 	<span class="text">
 	  Take bus 69 from the Stockholm central station, it takes about 12 minutes to reach Tekniska Museet.
 	</span>
       </div>
       <div id="tickets">
-	<h2>Tickets</h2>
+	<h1>Tickets</h1>
 	<span class="text">The event is FREE, we would however appreciate if you send us an email with an estimate of how many people you will be so we can get an idea of how many people will show up to <a class="text" href="mailto:info@make-all.se">info@make-all.se</a></span>
       </div>
       <div id="contact">
-	<h2>Contact</h2>
+	<h1>Contact</h1>
 	<span class="text">
 	  If its anything you are wondering about, send an email to <a class="text" href="mailto:info@make-all.se">info@make-all.se</a> or join us at #sparvnastet on freenode
 	</span>
@@ -66,6 +66,7 @@
       <input id="commandprompt" type="text" />
     </div>
     <script type="text/javascript" src="main.js"></script>
-
+    <script src="openlayers/OpenLayers.js"></script>
+    <script src="map.js"></script>
   </body>
 </html>
