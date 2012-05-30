@@ -1,5 +1,10 @@
-body {
+html {
     background-color: #000000;
+}
+
+body {
+    margin: 4em auto 4em auto;
+    width: 636px;
 }
 
 #prompt {
@@ -23,12 +28,19 @@ li {
     color: #ffffff;
 }
 
-h2 {
-    color: #ffffff;
+h1 {
+    color: #357345;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 34px;
+    margin-top: 2em;
 }
 
 .text{
-    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #c0c0c0;
 }
 
 .error {
@@ -41,4 +53,25 @@ h2 {
 
 .command {
     color: #ffffff;
+}
+
+.logo {
+    text-align:left;
+    margin-bottom: 6em;
+}
+
+.logo img {
+    padding: 0px;
+    width: 300px;
+    position: relative;
+    left: -84px;
+}
+.smallmap {
+    width: 512px;
+    height: 512px;
+    border: 1px solid #ccc;
+}
+
+.olControlAttribution {
+    bottom: 5px;
 }
