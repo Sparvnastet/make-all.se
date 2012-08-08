@@ -40,18 +40,24 @@ h2 {
     font-size: 20px;
 }
 
-.text, .speaker{
+.text, .speaker, .time{
     font-family: Georgia, serif;
     font-size: 1em;
     line-height: 1.5em;
     color: #c0c0c0;
 }
 
-.speaker {
-    color: #c0c0c0;
+.speaker, .time {
     font-size: 16px;
-    font-style: italic;
     font-weight: bold;
+}
+
+.speaker {
+    font-style: italic;
+}
+
+.time {
+    font-size: 14px;
 }
 
 .error {
