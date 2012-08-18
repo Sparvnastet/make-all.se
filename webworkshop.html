@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Webbprogrammering för aktivister - referens</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-08-18 14:30:40 CEST"/>
+<meta name="author" content="Axel Gagge"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Webbprogrammering för aktivister - referens</h1>
+
+<p>En snabb och smutsig workshop i webprogrammering för aktivister! Ta med din egen dator. Vi lär oss att skriva ett enkelt tema i WordPress och sätta upp hemsidor och bloggar för kampanjer och organisationer. Kopiera inga kodexempel utan skriv in dem <span style="text-decoration:underline;">för hand</span> - det underlättar inlärningen.
+</p>
+
+
+<style type="text/css">
+body {
+    font-family: Monaco, Courier, sans-serif;
+
+}
+
+#content {
+    margin: auto;
+    width: 480px;
+    margin-bottom: 80px;
+}
+
+/* #table-of-contents {display: none;} */
+
+/* Zenburn CSS! */
+
+/* Universal - sets color of text, border */
+
+body, html {
+color: #dcc !important;
+border-color: #444 !important;
+outline-color: #444 !important;
+text-shadow: none !important;}
+
+html *:after ,
+html *:before
+
+{color: #CCC !important;
+border-color: #666 !important;
+background: none transparent !important}
+
+/*No background images. try to exclude icons, other misc items. */
+
+*:not(:empty):not([onclick*="open"]):not(IMG):not(SPAN):not([class*="stars"]):not([id*="stars"]):not([id="rating"]):not([class="rating"]):not([class*="SPRITE"]):not([id*="SPRITE"]):not([id*="lbImage"])
+
+{ background-image: none !important }
+
+
+/* Link */
+
+a[href],
+a[href] *{
+
+color: #efdcbc !important;
+background-color: transparent !important;
+border-color: #666 !important;}
+
+/* Event Handlers/Attributes */
+
+[onclick],
+[ondblclick],
+[onmousedown]
+
+{color: #DFD5BC !important;
+background-color: transparent !important;
+text-indent: 0 !important}
+
+[onclick]:hover,
+[ondblclick]:hover,
+[onmousedown]:hover
+
+{color: #FEFF97 !important;}
+
+/* Make images translucent */
+
+IMG { opacity: .75 !important }
+IMG:hover { opacity: 1 !important }
+
+
+/* Basic Bodies */
+
+HTML, BODY { background: none #3f3f3f !important }
+
+
+/* Make descendents of the body element transparent. Formerly "DIV + SPAN" rules. */
+
+/* BODY * {background-color: transparent !important} */
+
+/* DIV[id] {background-color: inherit !important} */
+
+SPAN:not(:empty):not([class*="icon"]):not([id*="icon"]):not([class*="star"]):not([id*="star"]):not([id*="rating"]):not([class*="rating"]):not([class*="Sprite"]):not([class*="sprite"]) {
+
+background: none transparent !important;
+border-color: #000 !important}
+
+/* Try to contrast containers against the background that are well within the DOM tree */
+
+html:root > BODY > * > * > * > *:not(INPUT):not([onclick]) > DIV:not(:empty):not([id])
+
+{background: none #3f3f3f !important}
+
+
+/* Text Presentation */
+
+DFN, FONT, B, I, P, BIG, SMALL, STRONG, EM, CENTER { background-color: transparent !important }
+
+SUMMARY, DETAILS {background-color: inherit !important}
+
+ABBR, PROGRESS, TIME, LABEL {color: #bbccff !important}
+
+MARK,
+CODE, PRE,
+BLOCKQUOTE, BLOCKQUOTE *,
+[class*="quote"],
+TD[style*="inset"][class="alt2"] { background-color: inherit !important }
+
+
+/* Headings + Header */
+
+HEADER {background-color: #232323 !important}
+
+H1, H2 {
+
+background: inherit !important;
+-moz-border-radius: 5px !important;
+-webkit-border-radius: 5px !important;}
+
+H3 {
+
+background: inherit !important;
+-moz-border-radius: 5px !important;
+-webkit-border-radius: 5px !important;}
+
+H4 {
+
+background: inherit !important;
+-moz-border-radius: 5px !important;
+-webkit-border-radius: 5px !important;}
+
+H5, H6 {background: inherit !important}
+
+/* Headers with links*/
+
+h1 a[href],
+h2 a[href],
+h3 a[href],
+h4 a[href],
+h5 a[href],
+h6 a[href] {color: #C7D6C7 !important}
+
+
+/* Lists */
+
+DT {background-color: #372A2A !important}
+
+DL, DD { background-color: #232323 !important}
+
+LI, UL {background-color: inherit !important}
+
+LI A:not([class*="icon"]):not([id*="icon"]):not([onclick]),
+DT A:not([class*="icon"]):not([id*="icon"]):not([onclick])
+
+{background-image: none !important; text-indent: 0 !important}
+
+
+/* list Item highlight */
+
+LI[class*="item"] A:hover,
+LI[class*="item"]:hover,
+
+[class*="menuitem"]:hover /* Not list item, but still useful*/
+
+{background-color: #2E2B2F !important}
+
+
+/* Tables, cells */
+
+TABLE, COLGROUP, COL, THEAD, TBODY, TFOOT {
+
+background-color: #232323 !important;
+border-color: #333 !important}
+
+CAPTION {background-color: #353535 !important}
+
+TABLE[border="0"]:not([class]) {background-color: inherit !important}
+TABLE[WIDTH] {background-color: #111 !important}
+
+
+TH {background-color: #3d3737 !important}
+TR, TD:not([id]) {background-color: inherit !important}
+THEAD {background-color: inherit !important}
+
+
+/*** Input ***/
+
+/* Style reset. Ineffecient, yes, but I REALLY don't feel like fighting around with specificity scores*/
+
+INPUT[type="checkbox"] {-moz-appearance: checkbox !important;}
+INPUT[type="radio"] {-moz-appearance: radio !important;}
+
+HTML:root INPUT[type="image"] {opacity: .85 !important}
+HTML:root INPUT[type="image"]:hover {opacity: .95 !important}
+
+
+/* Drop-down menu */
+
+SELECT, OPTION{
+
+background: none #383838 !important;
+border-color:#555 !important;
+color:#f1f1f1 !important;
+-moz-appearance: none !important;}
+
+/***************
+*  Misc *********/
+
+ADDRESS {background: none #333 !important}
+
+IFRAME, FIELDSET, LEGEND, FORM {background: none transparent !important}
+
+NOBR {background-color: #232323 !important}
+
+HR {background-color: #999 !important}
+
+
+/* Remove Rounded Corners, Borders, Spacer, Padding images */
+
+IMG[src*="spacer"]:empty,
+[id*="round"]:empty,
+[id*="bottom"]:empty, [class*="bottom"]:empty, [class*="Bottom"]:empty,
+[id*="top"]:empty, [class*="top"]:empty, [class*="Top"]:empty,
+[class*="spacer"]:empty
+
+{background-image: none !important;}
+
+
+/* Menus and Navigation */
+
+NAV *,
+MENU *,
+
+/*Common naming conventions - in case previous declarations fail to give solid BG*/
+
+HTML BODY [class*="open"],
+HTML BODY [id*="Dropdown"],
+HTML BODY [id*="dropdown"],
+HTML BODY [class*="Dropdown"],
+HTML BODY [class*="dropdown"],
+HTML BODY [id*="menu"]:not(SELECT),
+HTML BODY [class*="menu"]:NOT(SELECT),
+HTML BODY [class*="tooltip"],
+HTML BODY [class*="popup"],
+HTML BODY [id*="popup"],
+
+/* Notes, details, etc. Maybe useful */
+
+HTML BODY [class*="note"],
+HTML BODY [class*="detail"],
+HTML BODY [class*="description"]
+
+{ background-color: #232323 !important }
+
+
+/* Also common */
+
+[class*="content"] {background-color: inherit !important}
+
+
+/* Headers, Logos */
+
+[id*="masthead"] a,[id*="header"] a,
+[id*="logo"] a, [class*="logo"] a
+
+{text-indent: 0 !important;}
+
+
+/* Instead of increasing specificity rating by using :not, set rules separately */
+
+HTML:root BODY [class*="layer"],
+HTML:root BODY #lightbox-nav,
+HTML:root BODY #imageContainer {background-color: transparent !important}
+
+}
+
+
+/*********************
+About...**************/
+
+@-moz-document url(about:blank) {
+
+html, html * {
+  background: none #3f3f3f !important;
+  color: #CCC !important;}
+
+}
+
+@-moz-document url-prefix("about:neterror") {
+
+html, body {background-color: #353535 !important; color: #CCC !important}
+#errorPageContainer {background-color: #222 !important; border-color: #666 !important}
+#errorPageContainer button {opacity: .8 !important}
+
+/*resurrect pages FF extension*/
+
+#resurrect {background-color: #333 !important; border-color: #000 !important}
+
+}
+
+html > * {
+  background-color: #3f3f3f !important;
+  color: #CCC !important;
+  border-color: black !important;
+}
+
+a {
+  color: #efdcbc !important;
+  background-color: transparent !important;
+}
+
+a:visited {
+  color: #b3c3a3 !important;
+  background-color: transparent !important;
+}
+
+body input, body textarea, body select, body button {
+  background-color: #4f4f4f !important;
+  color: #dcdccc !important;
+}
+</style>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Förberedelser </a></li>
+<li><a href="#sec-2">2 HTML/CSS </a>
+<ul>
+<li><a href="#sec-2-1">2.1 Förberedelser: </a></li>
+<li><a href="#sec-2-2">2.2 HTML </a></li>
+<li><a href="#sec-2-3">2.3 CSS </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Om WordPress </a>
+<ul>
+<li><a href="#sec-3-1">3.1 Förberedelser: </a></li>
+<li><a href="#sec-3-2">3.2 Hur WordPress fungerar (kortfattat) </a></li>
+<li><a href="#sec-3-3">3.3 Temats filer </a></li>
+<li><a href="#sec-3-4">3.4 Admingränssnittet </a></li>
+<li><a href="#sec-3-5">3.5 Om PHP (kort referens) </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Att bygga ett tema </a>
+<ul>
+<li><a href="#sec-4-1">4.1 Skapa ett Child Theme </a></li>
+<li><a href="#sec-4-2">4.2 CSS </a>
+<ul>
+<li><a href="#sec-4-2-1">4.2.1 Allmän layout </a></li>
+<li><a href="#sec-4-2-2">4.2.2 Typsnitt </a></li>
+<li><a href="#sec-4-2-3">4.2.3 CSS 3-effekter </a></li>
+</ul>
+</li>
+<li><a href="#sec-4-3">4.3 Templates </a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1 Att hämta poster, the loop </a></li>
+</ul>
+</li>
+<li><a href="#sec-4-4">4.4 PHP </a>
+<ul>
+<li><a href="#sec-4-4-1">4.4.1 Menyer </a></li>
+<li><a href="#sec-4-4-2">4.4.2 Funktionen <b>add_theme_support($feature)</b> </a></li>
+<li><a href="#sec-4-4-3">4.4.3 Lägga till nya inläggstyper </a></li>
+<li><a href="#sec-4-4-4">4.4.4 Anpassning av administrationsgränssnittet </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Domän och server </a>
+<ul>
+<li><a href="#sec-5-1">5.1 Att köpa en domän </a></li>
+<li><a href="#sec-5-2">5.2 Att välja och köpa en serverplats </a></li>
+<li><a href="#sec-5-3">5.3 Att installera WordPress </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Förberedelser </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>Se till att alla deltagare får tillgång till följande program:
+</p><ul>
+<li><a href="http://projects.gnome.org/gedit/">gedit</a> - en enkel texteditor
+</li>
+<li><a href="http://bitnami.org/stack/wordpress/">Bitnami Wordpress Stack</a> - en miljö för att utveckla WordPress lokalt
+</li>
+<li><a href="http://www.mozilla.org/sv-SE/firefox/new/">Firefox</a> eller <a href="https://www.google.com/intl/sv/chrome/">Chrome</a> - en bra webbläsare
+</li>
+<li><a href="http://getfirebug.com/">Firebug</a> - installera detta utvecklingsverktyg om du väljer Firefox ovan
+</li>
+</ul>
+
+<p>Se också till att du kan kolla upp tips och dokumentation på internet. Ett par resurser:
+</p><ul>
+<li><a href="http://wordpress.stackexchange.com/">http://wordpress.stackexchange.com/</a> - StackExchange-nätverk för att fråga/söka efter lösningar på problem
+</li>
+<li><a href="http://codex.wordpress.org/">http://codex.wordpress.org/</a> - dokumentation för WordPress
+</li>
+<li><a href="http://www.codecademy.com/tracks/web">http://www.codecademy.com/tracks/web</a> - en bra interaktiv miljö att lära sig/repetera grunderna i HTML och CSS
+</li>
+<li><a href="http://www.google.se/">http://www.google.se/</a> - sök efter hur andra löst liknande problem, men ta dem med en nypa salt. Ett vanligt sökresultat är http://www.w3schools.com/ - denna sida ger tyvärr ofta föråldrade eller dåliga råd, se http://w3fools.com/ om du undrar mer
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> HTML/CSS </h2>
+<div class="outline-text-2" id="text-2">
+
+<p>En kort introduktion för den som inte har sett och provat på HTML och CSS förut. Det här är på inget sätt en fullständig introduktion, bara en praktisk guide. Om du är bekant med ämnet kan du hoppa över den här delen.
+</p>
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Förberedelser: </h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>Skapa en mapp för vårt projekt på ett ställe där du kan hitta det, kalla mappen för <i>webworkshop</i> eller något liknande som du kommer ihåg. Alla filer som vi skapar i workshopen ska vi lägga i den mappen för att hålla ordning.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> HTML </h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>Skapa en fil som heter <i>index.html</i> och öppna den med gedit. Skriv in följande:
+<script src="https://gist.github.com/3102122.js" type="text/javascript"> </script>
+och öppna den i Firefox eller Safari. I Firefox, högerklicka på sidan och välj "Inspect element with Firebug", i Chrome, högerklicka och välj "Granska element". I Firebug kan du granska och testa HTML, CSS och javascript på ett praktiskt sätt. Navigera genom koden du skrivit i Firebug och försök ta reda på vad det betyder genom att hjälpas åt, fråga och googla! Vad gör <b>&lt;link&gt;</b>-taggen? Hitta och lägg till en bild (ta reda på hur) genom <b>&lt;img&gt;</b>-taggen ovan.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> CSS </h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>I samma mapp som du placerade <i>index.html</i>, skapa och öppna en fil som heter <i>style.css</i> med gedit. Skriv i följande kod:
+<script src="https://gist.github.com/3102097.js" type="text/javascript"> </script>
+och inspektera <i>index.html</i> i webläsaren igen. Är det något som inte fungerar? Varför? Försök förstå särskilt den sista delen, googla!
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Om WordPress </h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Förberedelser: </h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>Ladda ner <a href="http://bitnami.org/stack/WordPress">Bitnami WordPress Stack</a> och installera (om du stöter på problem så löser vi det på workshopen). Det är detta program vi använder för att WordPress ska köra <i>lokalt</i>. Det fungerar så att bitnami sköter en <i>databas</i> (där all data, t.ex. text och inställningar sparas) och en <i>server</i> (en Apache-server som hämtar och visar innehåll för oss på rätt sätt). Det fungerar på <span style="text-decoration:underline;">samma sätt</span> när en WordPress-sida slutligen sätts i drift.
+</li>
+<li>När bitnami installerats så kommer den att öppna ett fönster i din webläsare. Välj att gå vidare till din WordPress-stack (det ska finnas en stor blå länk högst upp på sidan som du kan trycka på!) I adressfönstret på webläsaren (högst upp i mitten vanligast) står nu en <i>IP-adress</i>, t.ex. "<a href="http://127.0.0.1:8080/wordpress/">http://127.0.0.1:8080/wordpress/</a>". Det är din <i>bas-URL</i> (i brist på bättre svenska ord :) ) och jag kommer att skriva den som [bas-url] från och med nu, så får du sätta in "XXX.X.X.X:XXXX/wordpress" eller vad det nu står helt själv! Gå in på "[bas-url]/wp-admin/" och du är i admin-gränssnittet
+</li>
+<li>Hitta var bitnami installerats och gå in i undermappen "<i>apps/wordpress/htdocs</i>". Det är denna mapp som innehåller alla WordPress filer. Bokmärk eller skriv ner hur du hittar tillbaka till den här mappen!
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Hur WordPress fungerar (kortfattat) </h3>
+<div class="outline-text-3" id="text-3-2">
+
+<p>Det här är viktigt att förstå lite av för att förstå sammanhanget i vilket vi gör webbsidor. WordPress har ett <i>administrationsgränssnitt</i>. I det skapar användaren innehåll som sparas i en <i>MySQL-databas</i>. När en besökare navigerar till sidan kör servern koden i WordPress. Koden producerar HTML, CSS och javascript, vilken användarens webbläsare tar emot, bearbetar och visar. WordPress PHP-filer innehåller en blandning av HTML och PHP-kod som körs och (i slutändan) producerar HTML-kod. PHP-koden ligger innanför taggarna <b>&lt;?php</b> &hellip; <b>?&gt;</b>. Den viktigaste mappen är undermappen "<i>wp-content</i>". Däri ligger (bland annat) följande undermappar:
+</p><ul>
+<li>"<i>themes</i>" - innehåller teman dvs. olika utseenden för sidan eller bloggen. Mappen innehåller olika teman i separata mappar, t.ex. "<i>twentyeleven</i>" som är standardtemat för WordPress
+</li>
+<li>"<i>plugins</i>" - innehåller plugins dvs. program som lägger till extra funktioner till temat, till exempel "akismet" som skyddar WordPress kommentarsfält mot spam
+</li>
+<li>"<i>languages</i>" - innehåller filer för att visa text på olika språk
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Temats filer </h3>
+<div class="outline-text-3" id="text-3-3">
+
+<p>Ett tema innehåller <span style="text-decoration:underline;">minimalt</span> en enda fil: <i>style.css</i>. Filen innehåller CSS och dessutom information om temat som visas i WordPress administrationsgränssnitt. Förutom denna fil innehåller temat filen <i>functions.php</i> vilken innehåller PHP-funktioner som kallas i andra tema-filer eller för att förändra beteendet hos hela temat, t.ex. lägga till funktionalitet som valbara headerbilder. För att visa olika vyer innehåller teman också olika <i>templatefiler</i>, exempelvis:
+</p><ul>
+<li><i>index.php</i> - innehåller kod för att visa 'startsidan', normalt en lista av de senaste inläggen
+</li>
+<li>header.php - inleder HTML-dokumentet med <b>&lt;html&gt;</b>, <b>&lt;head&gt;&hellip;&lt;/head&gt;</b>, <b>&lt;body&gt;</b> och ett sidhuvud med rubrik och navigationsmeny
+</li>
+<li>footer.php - avslutar HTML-dokumentet med en sidfot, <b>&lt;/body&gt;</b> och <b>&lt;/html&gt;</b>
+</li>
+<li>sidebar.php - visar sidebar-menyn
+</li>
+<li>single.php - för att visa enskilda inlägg
+</li>
+<li>page.php - för att visa 'sidor' (speciella WordPress-inlägg som är till för att presentera mer statisk information än blogginlägg)
+</li>
+<li>comments.php - för att visa kommentarsfält
+</li>
+</ul>
+
+<p>Kolla igenom de här filerna i temat <i>twentyeleven</i> och försök begripa vad du kan. Skriv ner eller hjälp varandra med de PHP-bitar som är svårförståeliga.
+</p></div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Admingränssnittet </h3>
+<div class="outline-text-3" id="text-3-4">
+
+<p>Administrationsgränssnittet, som finns på "<i>[bas-url]/wp-admin/</i>", är bara tillgängligt för inloggade användare. Där skriver du nya inlägg, byter tema, hanterar tillägg, och annat. Gränssnittet borde vara lätt att begripa för alla som bloggat tidigare, så vi fördjupar oss inte i det här.
+</p></div>
+
+</div>
+
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Om PHP (kort referens) </h3>
+<div class="outline-text-3" id="text-3-5">
+
+<ul>
+<li>Varje rad i PHP-kod måste avslutas med ett <b>;</b>, annars händer dåliga saker
+</li>
+<li>När jag talar om en <i>funktion</i> som <i>kallas</i> i PHP-kod, så menar jag ett uttryck, t.ex. <b>the_content()</b>, som kör kod (i detta fall sätter in text till ett visst inlägg). Funktionens <i>namn</i> är <b>the_content</b>, när jag <i>kallar</i> den genom att sätta <b>()</b> efter så körs koden som funktionen innehåller. En funktion kan ha <i>argument</i>, det vill säga information som måste skickas till den när den kallas. Vi kan skicka ett argument till <b>the_content</b> som talar om vad som ska visas när texten är för lång: <b>the_content('Läs mer')</b>. Funktioner defineras genom t.ex.:
+</li>
+</ul>
+
+
+<script src="https://gist.github.com/3299539.js" type="text/javascript"> </script>
+<ul>
+<li>en viktig typ av struktur i PHP är en <i>array</i> som är en datastruktur som innehåller ett antal värden med varsin "nyckel" som måste vara ett heltal eller en sträng. Arrays definieras genom funktionen <b>array</b>. Exempel:
+</li>
+</ul>
+
+
+<script src="https://gist.github.com/3299594.js" type="text/javascript"> </script>
+<ul>
+<li>vanligt förekommande är också:
+<ul>
+<li><b>if (&lt;condition&gt;) {&lt;consequence&gt;}</b> - om &lt;condition&gt; gäller så körs koden inom måsvingarna. Det kan också skrivas <b>if (&lt;condition&gt;) : &lt;consequence&gt; endif;</b>
+</li>
+<li>varianter på koden ovan: <b>if (&lt;condition&gt;) {&lt;consequence&gt;} else {&lt;something else&gt;}</b> eller <b>if (&lt;condition&gt;) {&lt;consequence&gt;} elif (&lt;other condition&gt;) {&lt;something else&gt;} else {&hellip;}</b>
+</li>
+<li><b>while (&lt;condition&gt;) {&lt;consequence&gt;}</b> - så länge som &lt;condition gäller körs koden i måsvingarna om och om igen, och varje gång testar while-loopen om &lt;condition&gt; fortfarande är uppfyllt. Kan även skrivas <b>while (&lt;condition&gt;) : &lt;consequence&gt; endwhile;</b>
+</li>
+<li><b>for (i = 0; i &lt; 10; i++) { &lt;kod&gt; }</b> - en for-loop. i ökas för varje steg i loopen, och loopen kör tills i &lt; 10 i detta fall. Kan vara praktiskt för att hämta indexerade element.
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Att bygga ett tema </h2>
+<div class="outline-text-2" id="text-4">
+
+<p>Det absolut enklaste sättet att bygga en hemsida med WordPress är genom att modifiera ett redan existerande tema. Det mest effektiva sättet att göra det är genom att använda WordPress <a href="http://codex.wordpress.org/Child_Themes">Child Themes</a>. Du kan använda dig av ett bra tema eller en tema-mall, och gradvis ändra och bygga på funktioner beroende på vad som passar dig, vilket sparar tid och håller dig borta från kod du inte vill se eller modifiera för tillfället. Det har också fördelen att du kan fortsätta använda dig av uppdaterade versioner av samma tema, men behålla dina ändringar utan att manuellt behöva göra om ändringarna i den nya versionen.
+</p>
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Skapa ett Child Theme </h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>Vi ska skapa ett Child Theme till WordPress standardtema <i>twentyeleven</i>. Child Themes placeras i en egen mapp i mappen <i>wp-content/themes</i>. Skapa en sådan mapp, skapa sedan filen <i>style.css</i> och öppna den i gedit. Skriv in följande:
+<script src="https://gist.github.com/3371286.js" type="text/javascript"> </script>
+Detta är den vanliga info-sektionen för ett WordPress-tema, men observera raden som börjar med <b>Template&hellip;</b> På denna rad anger vi att temat är ett Child Theme som bygger på funktionaliteten i temat <i>twentyeleven</i>. Gå nu in i administrationsgränssnittet och byt till det tema du just skapade. Besök sedan sidan igen, ser det fortfarande ut som temat <i>twentyeleven</i>?
+</p></div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> CSS </h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>Ett Child Theme <i>skriver över</i> stilinställningarna i template-temat. Det är därför sidan nu bör se ut som en "rå" HTML-sida. Om vi är intresserade av att behålla och utvidga stilmallen i <i>twentyeleven</i> kan vi importera den igen genom att placera
+<script src="https://gist.github.com/3371301.js" type="text/javascript"> </script>
+Notera att <b>@import</b> placeras direkt under info-sektionen men över eventuella ändringar vi vill göra (CSS betyder <i>cascading</i> style sheets, ändringar i en CSS-fil tillämpas uppifrån och ner). För att lära oss mer CSS ska vi <span style="text-decoration:underline;">inte</span> använda kodexemplet ovan, men prova och se om det fungerar!
+</p>
+</div>
+
+<div id="outline-container-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Allmän layout </h4>
+<div class="outline-text-4" id="text-4-2-1">
+
+<p>CSS kan vara oförutsägbart. En bra idé är att dela in sidan i ett rutnät av block av olika storlek, en <i>grid</i>. På så sätt kan innehåll placeras och hamnar automatiskt i tydliga avdelningar. Det är att rekommendera att använda taggarna:
+</p><ul>
+<li><b>&lt;header&gt;&hellip;&lt;/header&gt;</b> - för sidhuvud
+</li>
+<li><b>&lt;section&gt;&hellip;&lt;/section&gt;</b> - för olika funktionellt olika sektioner, t.ex. bildspel, senaste inlägg, sociala medier osv.
+</li>
+<li><b>&lt;div&gt;&hellip;&lt;/div&gt;</b> - ett alternativ till <b>&lt;section&gt;</b>, framför allt för indelningar som krävs för att få layouten rätt
+</li>
+<li><b>&lt;aside&gt;&hellip;&lt;/aside&gt;</b> - för sidebar och sidoställt innehåll i sektioner
+</li>
+<li><b>&lt;nav&gt;&hellip;&lt;/nav&gt;</b> - för navigationsmeny
+</li>
+<li><b>&lt;article&gt;&hellip;&lt;/article&gt;</b> - för att visa inlägg och utdrag ur inlägg
+</li>
+</ul>
+
+<p>I temat <i>twentyeleven</i> (vars templates vi använder oss av för närvarande) ser strukturen för att visa <i>index.php</i> förenklat ut så här:
+<script src="https://gist.github.com/3371509.js" type="text/javascript"> </script>
+Vi kan välja att kopiera filen <i>index.php</i> till vårt Child Theme och ändra strukturen. Just nu ska vi bara nöja oss med att göra en enkel justering av CSS:en till själva sidans layout, nämligen se till att temats sidebar (elementet <b>&lt;div &hellip; class="aside main-aside"&gt;&hellip;&lt;/div&gt;</b>) placeras parallellt till vänster sida om listan av inlägg (<b>&lt;div id="container"&gt;&hellip;&lt;/div&gt;</b>). Det kan uppnås till exempel genom följande CSS:
+<script src="https://gist.github.com/3371617.js" type="text/javascript"> </script>
+Koden ovan sätter bredden på <b>&lt;div id="wrapper"&gt;&hellip;&lt;/div&gt;</b> till 960 pixlar. Det huvudsakliga innehållet sätts till 66% av den totala bredden och vår sidebar tar upp en återstående tredjedelen av bredden. Både dessa ges attributet <b>display: table-cell</b> vilket placerar dem sida vid sida horisontellt, precis som celler i en tabell helt enkelt.
+</p></div>
+
+</div>
+
+<div id="outline-container-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Typsnitt </h4>
+<div class="outline-text-4" id="text-4-2-2">
+
+<p>Lägg mycket tid på att hitta lämpliga typsnitt, det gör en subtil skillnad. Läs på om läsbarhet. Använd inte fler än ett par typsnitt på samma sida om du inte har en god anledning. Exempel på enkel typografisk CSS kan vara:
+<script src="https://gist.github.com/3294875.js" type="text/javascript"> </script>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-2-3" class="outline-4">
+<h4 id="sec-4-2-3"><span class="section-number-4">4.2.3</span> CSS 3-effekter </h4>
+<div class="outline-text-4" id="text-4-2-3">
+
+<p>Nya versioner av CSS stöder layoutdetaljer och även animation som tidigare krävde javascript för att fungera:
+<script src="https://gist.github.com/3295472.js" type="text/javascript"> </script>
+Det finns många fler animationseffekter. Studera dokumentationen för css-attributet <b>transition</b> för information om syntaxen.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Templates </h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p>För att visa innehåll letar WordPress först efter template-filer i vårt tema, och sedan i dess template-tema. Om vi behöver ändra några av template-temats filer så kan vi skapa en kopia av dem i vårt Child Theme och göra ändringarna där istället.
+</p>
+</div>
+
+<div id="outline-container-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Att hämta poster, the loop </h4>
+<div class="outline-text-4" id="text-4-3-1">
+
+<p>För referens: "the loop" är benämnningen på PHP-blocket som WordPress använder för att visa en lista av inlägg, förenklat:
+<script src="https://gist.github.com/3294492.js" type="text/javascript"> </script>
+Det går att visa denna lista flera gånger, och det går att hämta valda delar av inlägg genom t.ex.:
+<script src="https://gist.github.com/3294510.js" type="text/javascript"> </script>
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> PHP </h3>
+<div class="outline-text-3" id="text-4-4">
+
+<p>WordPress laddar först versionen av <i>functions.php</i> i vårt Child Theme om den existerar, och sedan template-temats version utöver det. Här följer ett antal modifieringar som kan vara intressanta att känna till och eventuellt använda sig av.
+</p>
+</div>
+
+<div id="outline-container-4-4-1" class="outline-4">
+<h4 id="sec-4-4-1"><span class="section-number-4">4.4.1</span> Menyer </h4>
+<div class="outline-text-4" id="text-4-4-1">
+
+<p>WordPress har två typer av menyer: en <i>navigationsmeny</i>, som oftast placeras i headern, och en <i>sidebar</i>, som oftast placeras till höger om sidans innehåll. Innehållet i båda dessa kan hanteras från adminstrationsgränssnittet på praktiska sätt. Boilerplate-temat innehåller i filen <i>header.php</i> raden:
+<script src="https://gist.github.com/3294561.js" type="text/javascript"> </script>
+ett funktionsanrop av den typen visar en navigationsmenyn. Se WordPress dokumentation för funktionen om du vill kalla den med andra inställningar. Att placera en sidebar görs genom att kalla funktionen:
+<script src="https://gist.github.com/3294754.js" type="text/javascript"> </script>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-4-2" class="outline-4">
+<h4 id="sec-4-4-2"><span class="section-number-4">4.4.2</span> Funktionen <b>add_theme_support($feature)</b> </h4>
+<div class="outline-text-4" id="text-4-4-2">
+
+<p>Genom att kalla denna funktion i <i>functions.php</i> kan vi lägga till funktionalitet till temat. Funktionen har ett antal olika argument:
+</p><ul>
+<li>'post-formats' - inlägg kan väljas i flera format - bildgallerier, videos, statusuppdateringar, podcasts
+</li>
+<li>'post-thumbnails' - en utvald bild kan läggas till varje inlägg
+</li>
+<li>'custom-background' - valbar bakgrundsfärg och bakgrundsbild
+</li>
+<li>'custom-header' - möjlighet att välja en bild som normalt visas i sidhuvudet genom att kalla funktionen <b>header_image()</b>
+</li>
+<li>'automatic-feed-links' - lägger till feedlänkar till alla relevanta RSS/Atom-feeds för den aktuella sidan som visas
+</li>
+<li>'menus' - aktiverar valbara navigationsmenyer
+</li>
+</ul>
+
+<p>En del av de här extrafunktionerna kan inte användas rakt av, utan kräver lite extrajobb. Se dokumentationen till funktionen!
+</p></div>
+
+</div>
+
+<div id="outline-container-4-4-3" class="outline-4">
+<h4 id="sec-4-4-3"><span class="section-number-4">4.4.3</span> Lägga till nya inläggstyper </h4>
+<div class="outline-text-4" id="text-4-4-3">
+
+<p>Inläggstyper kan vara bra för innehåll som skiljer sig mycket från vanliga inlägg. För att definiera en ny typ av inlägg:
+<script src="https://gist.github.com/3299810.js" type="text/javascript"> </script>
+I den array vi skickar som argument till <b>register_post_type</b> finns bland annat nyckeln 'supports' som svarar mot en array med egenskaper som inläggstypen ska stödja. Titel, brödtext, thumbnails och andra egenskaper kan väljas till och väljas bort. För en lista med sådana egenskaper, se dokumentationen till funktionen! För att sedan visa listan av inlägg av den typ vi definierat skriver vi:
+<script src="https://gist.github.com/3299877.js" type="text/javascript"> </script>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-4-4" class="outline-4">
+<h4 id="sec-4-4-4"><span class="section-number-4">4.4.4</span> Anpassning av administrationsgränssnittet </h4>
+<div class="outline-text-4" id="text-4-4-4">
+
+<p>Det kräver en hel del kod, men är i princip lätt att göra. Först måste vi skapa en funktion som lägger till temasidan till administrationsmenyn och anger hur den ska visas. Det görs exempelvis genom följande kod:
+<script src="https://gist.github.com/3297662.js" type="text/javascript"> </script>
+Sedan måste de faktiska inställningarna (som funktionen <b>my_options()</b> kallar i formuläret genom <b>settings_fields()</b>) registreras med WordPress. Detta görs genom en funktion som registerar en PHP-array med inställningar. Anledningen till att vi registrerar en array istället för många variabler är för att varje inställning kräver ett fält i MySQL-databasen. Att inte klogga upp databasen är en bra sak, därför placerar vi alla inställningar inuti en array. När vi registrerar alternativen måste vi ange en funktion som presenterar en förklarande text om alternativen, en funktion som anger HTML för formulärelementet där alternativet ska matas in och en funktion som ser till att alternativen vi matar in inte innehåller skadlig kod:
+<script src="https://gist.github.com/3298508.js" type="text/javascript"> </script>
+</p></div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Domän och server </h2>
+<div class="outline-text-2" id="text-5">
+
+<p>En kort sammanfattning av vad som krävs för att sätta upp en WordPressinstallation.
+</p>
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Att köpa en domän </h3>
+<div class="outline-text-3" id="text-5-1">
+
+<p>Du kommer behöva köpa en domän, det kan du göra på <a href="http://loopia.se">http://loopia.se</a>. Kostnaden bör inte vara större än någon hundralapp.
+</p></div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Att välja och köpa en serverplats </h3>
+<div class="outline-text-3" id="text-5-2">
+
+<p>Kolla runt på många olika alternativ när du letar efter en server. Kanske har du redan tillgång till en, eller kan sätta upp en själv på en stationär dator du har stående hemma. Det är bekvämt speciellt för nybörjaren att skaffa ett <i>webhotell</i> till skillnad från en vanlig <i>server</i>. Den senare är ett användarkonto på en dator, till vilken du ansluter med FTP eller ssh och blir tvungen att sköta Apache och MySQL-databaser själv. Det tidigare erbjuder ett gränssnitt där du kan lägga till databaser, navigera grafiskt i en mappstruktur, sköta mail med mera. Ett minimalt webhotell erbjuds av arbetarkollektivet bakom <a href="http://trick.ca">http://trick.ca</a> - du kommer undan billigt men överväg faktorerna:
+</p><ul>
+<li>bandbredd - hur många MB trafik/månad tillåter servern?
+</li>
+<li>lagringsutrymme - en WordPressinstallation ligger runt 20 MB, men mediafiler tar mycket plats. Om ni behöver plats för många bilder eller om ni lagrar egna videofiler kan det krävas mycket utrymme.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Att installera WordPress </h3>
+<div class="outline-text-3" id="text-5-3">
+
+<p>För det första, kolla upp referensmaterialet till hur WordPress installeras på <a href="http://codex.wordpress.org/Installing_WordPress">http://codex.wordpress.org/Installing_WordPress</a>. Du behöver göra följande:
+</p><ul>
+<li>ladda upp innehållet i mappen <i>htdocs</i>, d.v.s. alla WordPress filer, på din server
+</li>
+<li>skapa en MySQL-databas och en användare
+</li>
+<li>göra ändringar i filen <i>wp-config.php</i> (använd dig av mallen <i>wp-config-sample.php</i>) för att ange uppgifter till databasen du just skapade
+</li>
+<li>om du lagt WordPress filer på rätt ställe så kan du köra installationsscriptet genom att gå till adressen <i>wp-admin/install.php</i>. Resten sköts automagiskt.
+</li>
+</ul>
+
+<p>Många servrar har ett gränssnitt som heter CPanel. Det innehåller ett verktyg för databaser som heter phpMyAdmin som du kan använda för att skapa databasen enkelt. Leta efter information själv, ingen av stegen ovan ska vara vidare svåra att lära sig själv!
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-08-18 14:30:40 CEST</p>
+<p class="author">Author: Axel Gagge</p>
+<p class="creator">Org version 7.7 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
