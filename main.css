@@ -94,3 +94,7 @@ h2 {
 }
 
 a, a:visited { color: #99ccff; }
+
+.backlinkblock {
+    margin: 3em 0;
+}
